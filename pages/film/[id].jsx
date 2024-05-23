@@ -12,7 +12,7 @@ export default function FilmPage(){
     
         useEffect(() => {
   
-            axios.get(`http://127.0.0.1:8000/film/id/${id}`)
+            axios.get(`https://digital-up-back-1.onrender.com/film/id/${id}`)
                 .then(response => {
                     setFilm(response.data);
                 })
@@ -22,7 +22,7 @@ export default function FilmPage(){
         }, [id]);
 
         useEffect(() => {
-            axios.get(`http://127.0.0.1:8000/genre/${film.id_genre}`)
+            axios.get(`https://digital-up-back-1.onrender.com/genre/${film.id_genre}`)
                 .then(response => {
                     setGenre(response.data);
                 })
