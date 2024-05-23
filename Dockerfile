@@ -1,4 +1,4 @@
-FROM node:14
+FROM node:18
 
 # Create and set the working directory
 RUN mkdir /front
