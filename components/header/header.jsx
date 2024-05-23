@@ -1,5 +1,3 @@
-
-import UiModal from '../uikit/uiModal'
 import { useState, useEffect } from 'react'
 
 export function Header({ showModal, userActive, searchAnswer }) {
@@ -16,7 +14,7 @@ export function Header({ showModal, userActive, searchAnswer }) {
         
     useEffect(() =>{
             if (searchTerm) {
-                fetch(`http://127.0.0.1:8000/film/name/${searchTerm}`)
+                fetch(`https://digital-up-back-1.onrender.com:8000/film/name/${searchTerm}`)
             .then(response => {
                 return response.json()
             })

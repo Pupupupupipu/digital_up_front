@@ -12,7 +12,7 @@ export function Catalog() {
     const [films, setFilms] = useState([]);
 
     useEffect(() => {
-        axios.get('http://127.0.0.1:8000/film')
+        axios.get('https://digital-up-back-1.onrender.com:8000/film')
             .then(response => {
                 setFilms(response.data);
             })

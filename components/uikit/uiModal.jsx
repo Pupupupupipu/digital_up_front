@@ -30,7 +30,7 @@ export default function UiModal({ showModal, userActive, userData }) {
         event.preventDefault()
 
         if (activeLink == 'Регистрация'){
-            axios.post('http://127.0.0.1:8000/users', { login, password })
+            axios.post('https://digital-up-back-1.onrender.com:8000/users', { login, password })
             .then(response => {
                 console.log('User created successfuly')
                 
@@ -54,7 +54,7 @@ export default function UiModal({ showModal, userActive, userData }) {
         }  
         
         if (activeLink == 'Вход'){
-            axios.post('http://127.0.0.1:8000/users/sign_in', { login, password })
+            axios.post('https://digital-up-back-1.onrender.com:8000/users/sign_in', { login, password })
             .then(response => {
                 console.log(response.data)
                 const { id, name, login } = response.data
@@ -118,7 +118,7 @@ function UserInfo({ userData }){
         const id = userData.id
 
         if (name == userData.name) return 0
-        axios.patch('http://127.0.0.1:8000/users/name', {id, name})
+        axios.patch('https://digital-up-back-1.onrender.com:8000/users/name', {id, name})
             .then(response => {
                 console.log('User patched successfuly', response)
                 setName(response.name)
