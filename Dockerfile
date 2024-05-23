@@ -1,4 +1,4 @@
-FROM node:14
+FROM node:18
 
 # Create and set the working directory
 RUN mkdir /front
@@ -18,8 +18,6 @@ ENV PORT=3000
 
 # Expose the port
 EXPOSE 3000
-
-RUN export NODE_ENV development
 
 # Command to run the Next.js development server
 CMD ["npx", "next", "dev"]
