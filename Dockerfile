@@ -13,11 +13,6 @@ RUN npm install
 # Copy the rest of your frontend code into the container
 COPY . .
 
-# Set environment variable to specify the port
-ENV PORT=3000
-
-# Expose the port
-EXPOSE 3000
 
 # Command to run the Next.js development server
-CMD ["npx", "next", "dev"]
+CMD ["npm", "run", "dev"]
