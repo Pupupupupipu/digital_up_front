@@ -85,8 +85,8 @@ export default function UiModal({ showModal, userActive, userData }) {
     }
 
     return (
-        <div className="fixed inset-0 bg-slate-900/60 backdrop-blur flex justify-end ">
-            <div className="relative w-1/3 flex justify-end ">
+        <div className="fixed inset-0 bg-slate-900/60 backdrop-blur flex justify-end z-10">
+            <div className="relative w-1/3 flex justify-end">
                 {(userData != undefined) ? <UserInfo userData={userData}/> : 
                 <SignInForm 
                     handleFormSubmit={handleFormSubmit} 
