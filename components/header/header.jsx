@@ -14,7 +14,7 @@ export function Header({ showModal, userActive, searchAnswer }) {
         
     useEffect(() =>{
             if (searchTerm) {
-                fetch(`https://digital-up-back-1.onrender.com:8000/film/name/${searchTerm}`)
+                fetch(`https://digital-up-back-1.onrender.com/film/name/${searchTerm}`)
             .then(response => {
                 return response.json()
             })
