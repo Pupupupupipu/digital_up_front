@@ -1,4 +1,6 @@
 import "../styles/global.css";
+import React from 'react';
+import { jsx as _jsx } from 'react/jsx-runtime';
 import { Header } from "../components/header/header"
 import UiModal from "../components/uikit/uiModal"
 import { useState } from 'react'
